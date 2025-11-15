@@ -10,6 +10,19 @@ const UserList = () => {
                 <label htmlFor="User">User <input type="text"/></label>
 
             </form>
+            {/* interface ClothListProps {
+  items: ProductType[];
+}
+
+const ClothList = ({ items }: ClothListProps) => {
+  return (
+    <div className="flex justify-around">
+      {items.map((item) => (
+        <ProductCard key={item.id} item={item} />
+      ))}
+    </div>
+  );
+}; */}
 
         </div>
       
