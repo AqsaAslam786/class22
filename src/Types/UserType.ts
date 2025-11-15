@@ -1,5 +1,6 @@
 export type UserType ={
-    name:string;
+    id:number;
+    username:string;
     nationality:string;
-    location:string;
+    
 }

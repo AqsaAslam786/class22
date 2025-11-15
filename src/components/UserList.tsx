@@ -1,34 +1,20 @@
-import UserForm from "./UserForm"
+import type { UserType } from "../types/UserType";
 
-
-const UserList = () => {
-    
-  return (
-    <div >
-        <div className="bg-amber-300 w-80 h-100 shadow">
-            <form action="get">
-                <label htmlFor="User">User <input type="text"/></label>
-
-            </form>
-            {/* interface ClothListProps {
-  items: ProductType[];
+interface UserListProps {
+  user: UserType[];
 }
 
-const ClothList = ({ items }: ClothListProps) => {
+const UserList = ({ user }: UserListProps) => {
   return (
-    <div className="flex justify-around">
-      {items.map((item) => (
-        <ProductCard key={item.id} item={item} />
+    <div>
+      {user.map((person) => (
+        <div key={person.id} className=" w-full grid grid-cols-3">
+            <p>{person.id}</p>
+          <p>{person.username}</p>
+          <p>{person.nationality}</p>
+        </div>
       ))}
     </div>
   );
-}; */}
-
-        </div>
-      
-        <UserForm />
-    </div>
-  )
-}
-
-export default UserList
+};
+export default UserList;
