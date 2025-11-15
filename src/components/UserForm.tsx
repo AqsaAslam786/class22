@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { UserType } from "../types/UserType";
+import type { UserType } from "../Types/UserType";
 
 interface UserFormProps {
   onAddUser: (user: UserType) => void;
@@ -7,6 +7,7 @@ interface UserFormProps {
 
 const UserForm = ({ onAddUser }: UserFormProps) => {
   const [formData, setFormData] = useState<UserType>({
+    id:1,
     username: "Aqsa Aslam",
     nationality: "Pakistani"
   });
@@ -15,6 +16,7 @@ const UserForm = ({ onAddUser }: UserFormProps) => {
     event.preventDefault();
 
     onAddUser({
+      id:formData.id,
       username: formData.username,
       nationality: formData.nationality
     });

@@ -1,4 +1,4 @@
-import type { UserType } from "../types/UserType";
+import type { UserType } from "../Types/UserType";
 
 interface UserListProps {
   user: UserType[];
